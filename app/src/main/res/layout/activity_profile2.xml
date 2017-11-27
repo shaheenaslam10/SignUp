@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.shaheen.a5thgeneration.signupproject.Profile2Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="20dp"
+        android:weightSum="80"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="17"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/less_rounds"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Required"
+                android:textColor="#000"
+                android:textSize="13dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorSwitchBack_light"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="10"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="7"
+                            android:gravity="center"
+                            android:text="Ethnicity"/>
+                        <LinearLayout
+                            android:id="@+id/ethnicity_linear"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/border"
+                            android:layout_weight="3"
+                            android:orientation="horizontal"
+                            android:weightSum="10"
+                            >
+                           <!-- <Spinner
+                                android:id="@+id/spin_require_ethnicit"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                />-->
+
+                            <TextView
+                                android:id="@+id/ethnicity_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:gravity="center_vertical"
+                                android:layout_weight="2"
+                                android:layout_marginLeft="5dp"
+                                android:text="---"/>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/dropdow"/>
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="10"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="7"
+                            android:gravity="center"
+                            android:text="Relationship"/>
+
+
+                            <LinearLayout
+                                android:id="@+id/require_relation"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/border"
+                                android:layout_weight="3"
+                                android:orientation="horizontal"
+                                android:weightSum="10"
+                                >
+                                <!-- <Spinner
+                                     android:id="@+id/spin_require_ethnicit"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="45dp"
+                                     />-->
+
+                                <TextView
+                                    android:id="@+id/relation_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:gravity="center_vertical"
+                                    android:layout_weight="2"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="---"/>
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="8"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/dropdow"/>
+
+
+
+
+                            </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="21"
+            android:gravity="center_vertical"
+            android:background="@drawable/less_rounds"
+            android:weightSum="10">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="6">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="13dp"
+                    android:paddingLeft="7dp"
+                    android:text="Looking For"/>
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+                <CheckBox
+                    android:id="@+id/check_travel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11dp"
+                    android:text="Travel Partner"/>
+                <CheckBox
+                    android:id="@+id/check_friendship"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11dp"
+                    android:text="Freindship"/>
+                <CheckBox
+                    android:id="@+id/check_longterm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11dp"
+                    android:text="LongTerm Relationship"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="18.5"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Share Your Travel Experience"
+                android:textColor="#000"
+                android:textSize="13dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/border"
+                android:layout_marginTop="6dp"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:id="@+id/experinceBox"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:autoLink="all"
+                    android:textSize="12dp"
+                    android:hint="Write Here"
+                    android:lines="6"
+                    android:lineSpacingExtra="3dp"
+                    android:minLines="1"
+                    android:gravity="top|left"
+                    android:background="@drawable/border"
+                    android:maxLength="140"
+                    android:scrollbars="none"
+                    android:inputType="textMultiLine|textCapSentences"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="24.5"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/save_profile"
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:text="Save Profile"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rounded_corner_purple_filled"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

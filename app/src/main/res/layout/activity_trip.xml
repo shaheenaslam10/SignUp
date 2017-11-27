@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.shaheen.a5thgeneration.signupproject.TripActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create a Trip"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:textColor="@color/purple"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorSwitchBack_light"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Travelling To"
+                    android:textColor="#000"
+                    android:textSize="13dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/rounded_corners_editext"
+                    android:layout_marginTop="6dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/travelling_to"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:textSize="11dp"
+                        android:paddingLeft="7dp"
+                        android:inputType="textPersonName"
+                        android:hint="Enter Location"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="When"
+                        android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:id="@+id/when_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/less_rounds"
+                        android:padding="13dp"
+                        android:text="00/00/0000"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To"
+                        android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:id="@+id/to_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/less_rounds"
+                        android:padding="13dp"
+                        android:text="00/00/0000"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1">
+                <CheckBox
+                    android:id="@+id/dates_flexible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dates Are Flexible"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Who's Paying"
+                    android:textColor="#000"
+                    android:layout_marginBottom="6dp"
+                    android:textSize="13dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/border"
+                    android:layout_height="wrap_content">
+                    <RadioGroup
+                        android:id="@+id/paying_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@color/black"
+                        android:orientation="horizontal">
+
+                        <ToggleButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="I'll Pay for you"
+                            android:textOff="I'll Pay for you"
+                            android:textOn="I'll Pay for you"
+                            android:onClick="onTogglePaying"
+                            android:background="@color/purple"
+                            android:checked="true"
+                            android:padding="4dp"
+                            android:textColor="#fff"
+                            android:textSize="10dp"
+                            android:id="@+id/toggleiPay" />
+
+                        <ToggleButton
+                            android:id="@+id/toggleyouPay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="You'll Pay for Us"
+                            android:textOff="You'll Pay for Us"
+                            android:textColor="@color/black"
+                            android:onClick="onTogglePaying"
+                            android:background="@drawable/border"
+                            android:padding="4dp"
+                            android:textOn="You'll Pay for Us"
+                            android:textSize="10dp"
+                            />
+
+                        <ToggleButton
+                            android:id="@+id/toggleBoth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="Split the Trip Cost"
+                            android:textOff="Split the Trip Cost"
+                            android:textColor="@color/black"
+                            android:onClick="onTogglePaying"
+                            android:textOn="Split the Trip Cost"
+                            android:background="@drawable/border"
+                            android:textSize="10dp"
+                            />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Describe"
+                    android:textColor="#000"
+                    android:textSize="13dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/border"
+                    android:layout_marginTop="6dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/trip_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:autoLink="all"
+                        android:textSize="12dp"
+                        android:hint="Tell People more about your Trip"
+                        android:lines="6"
+                        android:lineSpacingExtra="3dp"
+                        android:minLines="1"
+                        android:gravity="top|left"
+                        android:background="@drawable/border"
+                        android:maxLength="140"
+                        android:scrollbars="none"
+                        android:inputType="textMultiLine|textCapSentences"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tags"
+                    android:textColor="#000"
+                    android:textSize="13dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/rounded_corners_editext"
+                    android:layout_marginTop="6dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:textSize="11dp"
+                        android:paddingLeft="7dp"
+                        android:inputType="textPersonName"
+                        android:hint="Add a tag"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/cancel_trip"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Cancel"
+                    android:textColor="@color/purple"
+                    android:layout_centerInParent="true"
+                    android:textSize="11dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/rounded_corners_editext"/>
+                
+
+                    <Button
+                        android:id="@+id/create_trip"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="Create Trip"
+                        android:textColor="@color/white"
+                        android:textSize="11dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/rounded_corner_purple_filled"
+                        />
+
+                
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,551 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.shaheen.a5thgeneration.signupproject.Fragments.EditProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Tell Something About You"
+                    android:textColor="@color/purple"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/less_rounds"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="10">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/add_profile_image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/man" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Add Profile Picture"
+                        android:textColor="#ccc"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/less_rounds"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="Your Gender"
+                        android:textColor="#000"
+                        android:textSize="13dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp">
+
+                        <RadioGroup
+                            android:id="@+id/gender_group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="@color/black"
+                            android:orientation="horizontal">
+
+                            <ToggleButton
+                                android:id="@+id/toggleMale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:background="@drawable/border"
+                                android:onClick="onToggleGender"
+                                android:text="Male"
+                                android:textColor="@color/black"
+                                android:textOff="Male"
+                                android:textOn="Male"
+                                android:textSize="12dp" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleFemale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:background="@drawable/border"
+                                android:onClick="onToggleGender"
+                                android:text="Femal"
+                                android:textColor="@color/black"
+                                android:textOff="Female"
+                                android:textOn="Female"
+                                android:textSize="12dp" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="Interested in Travelling With"
+                        android:textColor="#000"
+                        android:textSize="13dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <RadioGroup
+                            android:id="@+id/interest_group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="@color/black"
+                            android:orientation="horizontal">
+
+                            <ToggleButton
+                                android:id="@+id/toggleMen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:background="@drawable/border"
+                                android:onClick="onToggleInterest"
+                                android:text="Men"
+                                android:textColor="@color/black"
+                                android:textOff="Men"
+                                android:textOn="Men"
+                                android:textSize="12dp" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleWomen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:background="@drawable/border"
+                                android:onClick="onToggleInterest"
+                                android:text="Women"
+                                android:textColor="@color/black"
+                                android:textOff="Women"
+                                android:textOn="Women"
+                                android:textSize="12dp" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleBoth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:background="@drawable/border"
+                                android:onClick="onToggleInterest"
+                                android:text="Both"
+                                android:textColor="@color/black"
+                                android:textOff="Both"
+                                android:textOn="Both"
+                                android:textSize="12dp" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="Your BirthDate"
+                        android:textColor="#000"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/birth_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/less_rounds"
+                        android:padding="13dp"
+                        android:text="day / month /  year" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/less_rounds"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your Location"
+                    android:textColor="#000"
+                    android:textSize="13dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/rounded_corners_editext"
+                    android:orientation="horizontal"
+                    android:weightSum="50">
+
+
+                    <EditText
+                        android:id="@+id/location"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="11"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter your Location"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="7dp"
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:id="@+id/location_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="19.5"
+                        android:gravity="center"
+                        android:text="Lahore"
+                        android:textColor="@color/black"
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:id="@+id/location_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="19.5"
+                        android:gravity="center"
+                        android:text="Pakistan"
+                        android:textColor="@color/black"
+                        android:textSize="11dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/less_rounds"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Required"
+                    android:textColor="#000"
+                    android:textSize="13dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorSwitchBack_light" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="7"
+                                android:gravity="center"
+                                android:text="Ethnicity" />
+
+                            <LinearLayout
+                                android:id="@+id/ethnicity_linear"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="3"
+                                android:background="@drawable/border"
+                                android:orientation="horizontal"
+                                android:weightSum="10">
+                                <!-- <Spinner
+                                    android:id="@+id/spin_require_ethnicit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    />-->
+
+                                <TextView
+                                    android:id="@+id/ethnicity_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_vertical"
+                                    android:text="---" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="8"
+                                    android:src="@drawable/dropdow" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="7"
+                                android:gravity="center"
+                                android:text="Relationship" />
+
+
+                            <LinearLayout
+                                android:id="@+id/require_relation"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="3"
+                                android:background="@drawable/border"
+                                android:orientation="horizontal"
+                                android:weightSum="10">
+                                <!-- <Spinner
+                                    android:id="@+id/spin_require_ethnicit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    />-->
+
+                                <TextView
+                                    android:id="@+id/relation_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_vertical"
+                                    android:text="---" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="8"
+                                    android:src="@drawable/dropdow" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/less_rounds"
+                android:gravity="center_vertical"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="6">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="7dp"
+                        android:text="Looking For"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/check_travel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Travel Partner"
+                        android:textSize="11dp" />
+
+                    <CheckBox
+                        android:id="@+id/check_friendship"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Freindship"
+                        android:textSize="11dp" />
+
+                    <CheckBox
+                        android:id="@+id/check_longterm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LongTerm Relationship"
+                        android:textSize="11dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Share Your Travel Experience"
+                    android:textColor="#000"
+                    android:textSize="13dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/border">
+
+                    <EditText
+                        android:id="@+id/experinceBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:autoLink="all"
+                        android:background="@drawable/less_rounds"
+                        android:gravity="top|left"
+                        android:hint="Write Here"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:lineSpacingExtra="3dp"
+                        android:lines="6"
+                        android:maxLength="140"
+                        android:minLines="1"
+                        android:padding="5dp"
+                        android:scrollbars="none"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/save_profile"
+                    android:layout_width="190dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/rounded_corner_purple_filled"
+                    android:text="Save Profile"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

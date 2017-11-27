@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#400257</color>
+    <color name="colorSwitchBack">#a4c639</color>
+    <color name="colorSwitchBack_light">#d3d3d3</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="profileTextColor">#46b3b8</color>
+    <color name="purple">#400257</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="activate_text_color">#FF666666</color>
+    <color name="deactivate_text_color">#FFCCCCCC</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="primaryColor">#00000000</color>
+    <color name="primaryColorDark">#4b5c93</color>
+    <color name="colorTextPrimary">#fff</color>
+    <color name="colorTextSecondary">#fff</color>
+</resources>

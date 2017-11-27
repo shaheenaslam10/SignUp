@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shaheen.a5thgeneration.signupproject.ProfileActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="02dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:weightSum="200"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="46"
+                android:layout_marginBottom="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Tell Something About You"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    android:textColor="@color/purple"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="42"
+                android:padding="10dp"
+
+                android:background="@drawable/less_rounds"
+                android:weightSum="10">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="6">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/add_profile_image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/man"/>
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Add Profile Picture"
+                        android:textColor="#ccc"
+                        android:gravity="center_vertical"
+                        android:textSize="13dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_weight="24"
+                android:background="@drawable/less_rounds"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Your Gender"
+                        android:textColor="#000"
+                        android:layout_marginBottom="6dp"
+                        android:textSize="13dp"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp">
+                        <RadioGroup
+                            android:id="@+id/gender_group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="@color/black"
+                            android:orientation="horizontal">
+
+                            <ToggleButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Male"
+                                android:textOff="Male"
+                                android:textOn="Male"
+                                android:onClick="onToggleGender"
+                                android:background="@color/purple"
+                                android:checked="true"
+                                android:textColor="#fff"
+                                android:textSize="12dp"
+                                android:id="@+id/toggleMale" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleFemale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Femal"
+                                android:textOff="Female"
+                                android:background="@drawable/border"
+                                android:textColor="@color/black"
+                                android:onClick="onToggleGender"
+                                android:textOn="Female"
+                                android:textSize="12dp"
+                                />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Interested in Travelling With"
+                        android:textColor="#000"
+                        android:layout_marginBottom="6dp"
+                        android:textSize="13dp"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/border"
+                        android:layout_height="wrap_content">
+                        <RadioGroup
+                            android:id="@+id/interest_group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="@color/black"
+                            android:orientation="horizontal">
+
+                            <ToggleButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Men"
+                                android:textOff="Men"
+                                android:textOn="Men"
+                                android:onClick="onToggleInterest"
+                                android:background="@color/purple"
+                                android:checked="true"
+                                android:textColor="#fff"
+                                android:textSize="12dp"
+                                android:id="@+id/toggleMen" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleWomen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Women"
+                                android:textOff="Women"
+                                android:textColor="@color/black"
+                                android:onClick="onToggleInterest"
+                                android:background="@drawable/border"
+                                android:textOn="Women"
+                                android:textSize="12dp"
+                                />
+
+                            <ToggleButton
+                                android:id="@+id/toggleBoth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Both"
+                                android:textOff="Both"
+                                android:textColor="@color/black"
+                                android:onClick="onToggleInterest"
+                                android:textOn="Both"
+                                android:background="@drawable/border"
+                                android:textSize="12dp"
+                                />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Your BirthDate"
+                        android:textColor="#000"
+                        android:layout_marginBottom="6dp"
+                        android:textSize="13dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:orientation="horizontal">
+                            <Spinner
+                                android:id="@+id/spin_month"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:background="@android:color/transparent"
+                                />
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:src="@drawable/dropdow"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="horizontal">
+                            <Spinner
+                                android:id="@+id/spin_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+
+                                android:background="@android:color/transparent"
+                                />
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:src="@drawable/dropdow"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:orientation="horizontal">
+                            <Spinner
+                                android:id="@+id/spin_year"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:background="@android:color/transparent"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:src="@drawable/dropdow"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="43"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your Location"
+                    android:textColor="#000"
+                    android:textSize="13dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/rounded_corners_editext"
+                    android:layout_marginTop="6dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/location"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:textSize="11dp"
+                        android:paddingLeft="7dp"
+                        android:inputType="textPersonName"
+                        android:hint="Enter your Location"/>
+                </LinearLayout>
+
+            </LinearLayout>
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginBottom="5dp"
+               android:layout_weight="45"
+               android:orientation="vertical">
+               <Button
+                   android:id="@+id/next1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="40dp"
+                   android:text="Next"
+                   android:textColor="@color/white"
+                   android:layout_centerInParent="true"
+                   android:background="@drawable/rounded_corner_purple_filled"/>
+           </RelativeLayout>
+
+        </LinearLayout>
+
+</LinearLayout>
+<!--
+</LinearLayout>
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginBottom="10dp">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Tell Something About You"
+    android:gravity="center"
+    android:textSize="17dp"
+    android:textColor="#46b3b8"
+    android:textStyle="bold"
+    />
+</LinearLayout>
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:layout_marginTop="10dp"
+android:weightSum="10">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="6">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/add_profile_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/man"/>
+</RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="4">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Add Profile Picture"
+        android:textColor="#ccc"
+        android:gravity="center_vertical"
+        android:textSize="13dp"/>
+</LinearLayout>
+</LinearLayout>
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Your Gender"
+    android:textColor="#000"
+    android:layout_marginBottom="6dp"
+    android:textSize="13dp"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:background="@drawable/border"
+    android:layout_height="wrap_content">
+    <RadioGroup
+        android:id="@+id/gender_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textOff="Male"
+            android:textOn="Male"
+            android:onClick="onToggleGender"
+            android:background="#46b3b8"
+            android:checked="true"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:id="@+id/toggleMale" />
+        &lt;!&ndash;  <View
+              android:layout_width="1dp"
+              android:layout_height="match_parent"
+              android:background="@color/black"/>&ndash;&gt;
+        <ToggleButton
+            android:id="@+id/toggleFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femal"
+            android:textOff="Female"
+            android:background="@drawable/border"
+            android:textColor="@color/black"
+            android:onClick="onToggleGender"
+            android:textOn="Female"
+            android:textSize="12dp"
+            />
+
+    </RadioGroup>
+</LinearLayout>
+
+</LinearLayout>
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Interested in Travelling With"
+    android:textColor="#000"
+    android:layout_marginBottom="6dp"
+    android:textSize="13dp"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:background="@drawable/border"
+    android:layout_height="wrap_content">
+    <RadioGroup
+        android:id="@+id/interest_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Men"
+            android:textOff="Men"
+            android:textOn="Men"
+            android:onClick="onToggleInterest"
+            android:background="#46b3b8"
+            android:checked="true"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:id="@+id/toggleMen" />
+
+        <ToggleButton
+            android:id="@+id/toggleWomen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Women"
+            android:textOff="Women"
+            android:textColor="@color/black"
+            android:onClick="onToggleInterest"
+            android:background="@drawable/border"
+            android:textOn="Women"
+            android:textSize="12dp"
+            />
+
+        <ToggleButton
+            android:id="@+id/toggleBoth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Both"
+            android:textOff="Both"
+            android:textColor="@color/black"
+            android:onClick="onToggleInterest"
+            android:textOn="Both"
+            android:background="@drawable/border"
+            android:textSize="12dp"
+            />
+
+    </RadioGroup>
+</LinearLayout>
+
+</LinearLayout>
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:layout_marginTop="20dp">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Your BirthDate"
+    android:textColor="#000"
+    android:layout_marginBottom="6dp"
+    android:textSize="13dp"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/spin_month"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/dropdow"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/spin_date"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+
+            android:background="@android:color/transparent"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/dropdow"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/spin_year"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/dropdow"/>
+    </LinearLayout>
+</LinearLayout>
+
+
+
+
+</LinearLayout>
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Your Location"
+    android:textColor="#000"
+    android:textSize="13dp"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/border"
+    android:layout_marginTop="6dp"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:textSize="11dp"
+        android:paddingLeft="7dp"
+        android:inputType="textPersonName"
+        android:hint="Enter your Location"/>
+</LinearLayout>
+
+</LinearLayout>
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:layout_marginTop="20dp"
+android:weightSum="10">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="6">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:text="Looking For"/>
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="4"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11dp"
+        android:text="Travel Partner"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11dp"
+        android:text="Freindship"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11dp"
+        android:text="LongTerm Relationship"/>
+
+</LinearLayout>
+</LinearLayout>
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+android:layout_marginBottom="30dp"
+android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Describe YourSelf"
+    android:textColor="#000"
+    android:textSize="13dp"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/border"
+    android:layout_marginTop="6dp"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:id="@+id/etMessageBox"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:autoLink="all"
+        android:textSize="12dp"
+        android:hint="Please enter your description"
+        android:lines="6"
+        android:lineSpacingExtra="4dp"
+        android:minLines="1"
+        android:gravity="top|left"
+        android:background="@drawable/border"
+        android:maxLength="140"
+        android:scrollbars="none"
+        android:inputType="textMultiLine|textCapSentences"/>
+</LinearLayout>
+
+</LinearLayout>-->

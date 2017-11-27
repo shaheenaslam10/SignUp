@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:icon="@drawable/settings_pro"
+            android:title="1. White"
+            app:showAsAction="always">
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+       >
+
+        <item android:id="@+id/british"
+            android:title="1. British"
+            app:showAsAction="always"/>
+        <item
+            android:id="@+id/irish"
+            android:title="2. Irish"
+            app:showAsAction="always"/>
+        <item
+            android:id="@+id/white_background"
+            android:title="3. Any other White Background"
+            app:showAsAction="always"/>
+
+    </menu>
+    </item>
+    <item
+
+        android:title="2. Mixed"
+        app:showAsAction="always">
+
+        <menu xmlns:android="http://schemas.android.com/apk/res/android"
+            >
+
+            <item android:id="@+id/white_black_carribean"
+                android:title="1. White and Black Caribbean"
+                app:showAsAction="always"/>
+            <item
+                android:id="@+id/white_black_african"
+                android:title="2. White and Black African"
+                app:showAsAction="always"/>
+            <item
+                android:id="@+id/white_asian"
+                android:title="3. White and Asian"
+                app:showAsAction="always"/>
+            <item
+                android:id="@+id/mixed_background"
+                android:title="4. Any other Mixed Background"
+                app:showAsAction="always"/>
+
+        </menu>
+    </item>
+    <item
+
+        android:title="3. Asian or Asian British"
+        app:showAsAction="always">
+
+        <menu xmlns:android="http://schemas.android.com/apk/res/android"
+            >
+
+            <item android:id="@+id/pakistani"
+                android:title="1. Pakistani"
+                app:showAsAction="always"/>
+            <item
+                android:id="@+id/indian"
+                android:title="2. Indian"
+                app:showAsAction="always"/>
+            <item
+                android:id="@+id/bangladeshi"
+                android:title="3. Bangladeshi"
+                app:showAsAction="always"/>
+            <item
+                android:id="@+id/asian_background"
+                android:title="4. Any other Asian Background"
+                app:showAsAction="always"/>
+
+        </menu>
+    </item>
+    <item
+
+        android:title="4. Black or Black British"
+        app:showAsAction="always">
+
+        <menu xmlns:android="http://schemas.android.com/apk/res/android"
+            >
+
+            <item android:id="@+id/caribbean"
+                android:title="1. Caribbean"
+                app:showAsAction="always"/>
+            <item
+                android:id="@+id/african"
+                android:title="2. African"
+                app:showAsAction="always"/>
+
+            <item
+                android:id="@+id/black_background"
+                android:title="3. Any other Black Background"
+                app:showAsAction="always"/>
+
+        </menu>
+    </item>
+    <item
+
+        android:title="5. Chinese or other Ethnic Group"
+        app:showAsAction="always">
+
+        <menu xmlns:android="http://schemas.android.com/apk/res/android"
+            >
+
+            <item android:id="@+id/chinese"
+                android:title="1. Chinese"
+                app:showAsAction="always"/>
+
+            <item
+                android:id="@+id/thnic_group"
+                android:title="2. Any other Ethnic Group"
+                app:showAsAction="always"/>
+
+        </menu>
+    </item>
+    <item
+
+        android:id="@+id/not_stated"
+        android:title="6. Not Stated"
+        app:showAsAction="always">
+
+    </item>
+
+
+</menu>

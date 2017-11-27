@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SignUpProject</string>
+    <string name="facebook_app_id">1727825690592063</string>
+    <string name="fb_login_protocol_scheme">fb1727825690592063</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Currently No Messages…</string>
+    <string-array name="relation_array">
+        <item>Tab 1</item>
+        <item>Tab 2</item>
+    </string-array>
+</resources>

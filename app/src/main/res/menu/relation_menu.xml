@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/single"
+        android:title="Single"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/divorced"
+        android:title="Divorced"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/widowed"
+        android:title="Widowed"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/separated"
+        android:title="Separated"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/married_looking"
+        android:title="Married But Looking"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/open_relationship"
+        android:title="In an Open Relationship"
+        app:showAsAction="always"/>
+
+</menu>
